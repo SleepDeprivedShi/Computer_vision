@@ -8,15 +8,11 @@ The system captures live video, detects the user's hand, processes the detected 
 
 The project demonstrates the application of computer vision, hand tracking, image processing, and machine learning for real-time gesture recognition.
 
----
-
 ## Problem Statement
 
 Communication can be difficult between people who use American Sign Language (ASL) and people who are not familiar with sign language.
 
 The objective of this project is to develop a computer vision-based system that can recognize predefined ASL hand gestures from a webcam and display the predicted gesture in real time.
-
----
 
 ## Objectives
 
@@ -25,8 +21,6 @@ The objective of this project is to develop a computer vision-based system that 
 - Process the detected hand gesture for classification.
 - Recognize predefined ASL gestures using a KNN classifier.
 - Display the predicted gesture in real time.
-
----
 
 ## Features
 
@@ -37,20 +31,16 @@ The objective of this project is to develop a computer vision-based system that 
 - Real-time ASL prediction
 - Visual display of the recognized gesture
 
----
-
 ## Technologies Used
 
-- **Python**
-- **OpenCV**
-- **CVZone**
-- **MediaPipe**
-- **NumPy**
-- **Scikit-learn**
-- **Joblib**
-- **K-Nearest Neighbors (KNN)**
-
----
+- Python
+- OpenCV
+- CVZone
+- MediaPipe
+- NumPy
+- Scikit-learn
+- Joblib
+- K-Nearest Neighbors (KNN)
 
 ## System Workflow
 
@@ -70,62 +60,51 @@ ASL Prediction
 Display Result
 ```
 
----
-
 ## Project Structure
 
 ```text
-ASL_visualiser/
+Computer_vision/
 │
+├── Data/
+├── screenshots/
+├── asl_knn_model.pkl
 ├── hand_tracking.py
 ├── recognize_gesture.py
 ├── train.py
 ├── train_model.py
-│
-├── asl_knn_model.pkl
-├── dataset/
-│
 ├── requirements.txt
 ├── README.md
 └── statement.md
 ```
 
-> The exact file structure may vary depending on the files included in the submitted repository.
-
----
-
 ## Model
 
-The project uses a **K-Nearest Neighbors (KNN)** classifier for gesture recognition.
+The project uses a K-Nearest Neighbors (KNN) classifier for gesture recognition.
 
-The model is trained using the available ASL gesture dataset. During real-time operation, the detected hand gesture is processed and provided to the trained classifier, which predicts the corresponding ASL gesture.
+The model is trained using ASL gesture samples. During real-time operation, the detected hand gesture is processed and provided to the trained classifier, which predicts the corresponding ASL gesture.
 
 ### Why KNN?
 
-KNN is a simple supervised machine learning algorithm that classifies an input based on the closest training samples. It is suitable for this project because the extracted gesture features can be compared with previously collected gesture samples.
-
----
+KNN is a simple supervised machine learning algorithm that classifies an input based on the closest training samples. It is used in this project to classify the extracted gesture features into the supported ASL gesture classes.
 
 ## Installation
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/SleepDeprivedShi/Computer_vision
-cd ASL_visualiser
+git clone https://github.com/SleepDeprivedShi/Computer_vision.git
+cd Computer_vision
 ```
 
-### 2. Install the required dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
 ## How to Run
 
-Run the appropriate Python file used for real-time recognition:
+Run the real-time gesture recognition program:
 
 ```bash
 python recognize_gesture.py
@@ -135,17 +114,11 @@ Allow the application to access your webcam and place your hand in front of the 
 
 The system will detect the hand gesture and display the predicted ASL sign.
 
-> If your current project uses a different file as the main entry point, replace the command above with the actual command used by your project.
-
----
-
 ## Dataset
 
-The project uses a dataset containing images/samples of predefined ASL hand gestures.
+The model was trained using ASL gesture samples. The trained model is included in the repository for real-time recognition.
 
-The dataset is used during the training process to teach the KNN classifier how to distinguish between different hand gestures.
-
----
+The complete training dataset may not be included in the repository due to its size.
 
 ## Testing
 
@@ -155,50 +128,41 @@ The system can be tested by:
 2. Allowing webcam access.
 3. Showing a supported ASL gesture to the camera.
 4. Observing the predicted gesture displayed by the application.
-5. Testing multiple supported gestures under different conditions.
+5. Testing multiple supported gestures.
 
 Testing focuses on whether the system correctly detects the hand and recognizes the supported ASL gestures.
 
----
-
 ## Screenshots
 
+Screenshots of the working application are provided in the `screenshots/` directory.
+
 ### Real-Time Gesture Recognition
+
 ![ASL Visualizer](screenshots/recognition.png)
 
-
----
+> If the screenshot filename differs, replace `recognition.png` with the actual filename in the `screenshots` folder.
 
 ## Limitations
 
-- The system recognizes only the gestures included in the trained dataset.
+- The system recognizes only the gestures included in the trained model.
 - Recognition performance can be affected by lighting and background conditions.
 - Hand positioning and camera quality can affect detection.
 - The system is designed for predefined ASL gestures rather than complete sign-language sentences.
 
----
-
 ## Future Enhancements
 
-Possible future improvements include:
-
-- Supporting more ASL gestures.
-- Improving recognition accuracy.
-- Supporting continuous sign-language recognition.
-- Adding sentence-level prediction.
-- Improving robustness under different lighting and backgrounds.
-- Developing a more comprehensive user interface.
-
----
+- Support for more ASL gestures.
+- Improved recognition accuracy.
+- Continuous sign-language recognition.
+- Sentence-level prediction.
+- Improved robustness under different lighting and backgrounds.
 
 ## References
 
 - OpenCV Documentation
 - CVZone Documentation
-- Scikit-learn Documentation
 - MediaPipe Documentation
-
----
+- Scikit-learn Documentation
 
 ## Author
 

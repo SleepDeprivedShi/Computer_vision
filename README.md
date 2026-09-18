@@ -163,15 +163,8 @@ Testing focuses on whether the system correctly detects the hand and recognizes 
 
 ## Screenshots
 
-Add screenshots of the working application below.
-
 ### Real-Time Gesture Recognition
-
 ![ASL Visualizer](screenshots/recognition.png)
-
-### Gesture Prediction
-
-![Gesture Prediction](screenshots/prediction.png)
 
 
 ---

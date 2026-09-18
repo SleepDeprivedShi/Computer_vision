@@ -111,7 +111,7 @@ KNN is a simple supervised machine learning algorithm that classifies an input b
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/SleepDeprivedShi/Computer_vision
 cd ASL_visualiser
 ```
 
@@ -173,7 +173,6 @@ Add screenshots of the working application below.
 
 ![Gesture Prediction](screenshots/prediction.png)
 
-> Replace the image paths above with the actual screenshots included in the repository.
 
 ---
 
